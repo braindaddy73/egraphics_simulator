@@ -20,14 +20,14 @@ impl History {
   }
     
   fn shift_left (&mut self) {
-    for i in 1..99 {
+    for i in 1..=99 {
       history[i-1] = history [i];
     }
   }
     
   fn update_mean (&mut self) {
     buf = 0;
-    for i in 0.99 {
+    for i in 0..=99 {
       buf += history[i];
     }
     mean = buf / 100.00;
