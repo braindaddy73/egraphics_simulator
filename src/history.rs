@@ -5,7 +5,7 @@ pub struct History {
 
 impl Data {
 
-  pub fn clear() {
+  pub fn new() -> Self {
     for i in 0..99 {
       history[i] = 0;
     }
