@@ -1,18 +1,17 @@
+#[derive(Default)]
 pub struct History {
   history: [f32, 100],
-  mean: f32
+  mean: f32,
 }
 
 impl History {
 
   pub fn new() -> Self {
     Self {
-        for i in 0..99 {
-          history[i] = 0;
-        }
-        mean = 0.0;
+      mean : 0.0,
+      history : [0.0; 100] 
     }
-  
+  }
 
   pub fn update(&mut self, val: f32) {
     shift_left();
@@ -23,8 +22,9 @@ impl History {
   fn shift_left (&mut self) {
     for i in 1..99 {
       history[i-1] = history [i];
+    }
   }
-
+    
   fn update_mean (&mut self) {
     buf = 0;
     for i in 0.99 {
