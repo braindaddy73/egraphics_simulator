@@ -2,6 +2,7 @@ use
 
 pub struct Renderer {
 	display: SimulatorDisplay,
+	window: 
 }
 
 impl Renderer {
@@ -13,7 +14,8 @@ impl Renderer {
 		draw_background();
 		draw_wlan();
 		draw_temp();
-		draw_history;
+		draw_history();
+		show();
 	}
 	
 	fn draw_background(&mut self);
