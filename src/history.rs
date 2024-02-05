@@ -3,14 +3,16 @@ pub struct History {
   mean: f32
 }
 
-impl Data {
+impl History {
 
   pub fn new() -> Self {
-    for i in 0..99 {
-      history[i] = 0;
+    Self {
+        for i in 0..99 {
+          history[i] = 0;
+        }
+        mean = 0.0;
     }
-    mean = 0.0;
-  }
+  
 
   pub fn update(&mut self, val: f32) {
     shift_left();
